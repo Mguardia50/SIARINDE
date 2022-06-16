@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.logoNav{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+
+nav{
+    background-color: aquamarine;
+}
+
+img{
+    height: 100px;
+    width: 200px;
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to top, white, white, white, white, green);
+    box-shadow: 0 0 10px black;
+    
+}
+
+.MuiBox-root {
+    margin: 50px;
+}
+
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

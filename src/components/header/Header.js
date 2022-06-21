@@ -9,6 +9,7 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import RunCircleIcon from '@mui/icons-material/RunCircle';
 import SportsBaseballTwoToneIcon from '@mui/icons-material/SportsBaseballTwoTone';
 import AccountMenu from "./MenuNav";
+import CartWidget from "./CartWidget";
 
 const Header = () =>{
     const [value, setValue] = React.useState(0);
@@ -20,7 +21,7 @@ const Header = () =>{
         <div>
             <div className="logoNav">
                 <img src={Logo} alt="" />
-                <h1>SIARINDE</h1>
+                <h1>SIaRINDE</h1>
             </div>
             <div>  
                 <p>Alquiler de canchas, profesores y venta de articulos deportivos</p>
@@ -51,8 +52,12 @@ const Header = () =>{
           
         </nav>
 
-        <AccountMenu id="MenuCuenta"></AccountMenu>
-    </header>
+      <div className="CartMenu">
+          <CartWidget></CartWidget>
+          <AccountMenu id="MenuCuenta"></AccountMenu>
+      </div>
+      
+      </header>
         
       </>
     )}

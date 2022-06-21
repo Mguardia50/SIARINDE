@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
@@ -9,6 +12,11 @@ align-items: center;
 justify-content: space-evenly;
 }
 
+.CartMenu{
+    display: flex;
+    align-items: center;
+
+}
 nav{
     background-color: aquamarine;
 }
@@ -32,9 +40,6 @@ header{
 }
 
 p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Neucha', cursive;
+    margin: 10px;
 }

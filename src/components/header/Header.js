@@ -8,6 +8,7 @@ import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import RunCircleIcon from '@mui/icons-material/RunCircle';
 import SportsBaseballTwoToneIcon from '@mui/icons-material/SportsBaseballTwoTone';
+import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import AccountMenu from "./MenuNav";
 import CartWidget from "./CartWidget";
 
@@ -47,6 +48,7 @@ const Header = () =>{
               <BottomNavigationAction label="Paddle" icon={<SportsBaseballTwoToneIcon fontSize="large"/>} />
               <BottomNavigationAction label="Futbol" icon={<SportsSoccerIcon fontSize="large"/>} />
               <BottomNavigationAction label="Running" icon={<RunCircleIcon fontSize="large"/>} />
+              <BottomNavigationAction label="Tienda" icon={<AddBusinessIcon fontSize="large"/>} />
             </BottomNavigation>
             
           

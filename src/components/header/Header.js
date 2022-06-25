@@ -55,7 +55,7 @@ const Header = () =>{
         </nav>
 
       <div className="CartMenu">
-          <CartWidget></CartWidget>
+          <CartWidget numeroCarrito={0}></CartWidget>
           <AccountMenu id="MenuCuenta"></AccountMenu>
       </div>
       

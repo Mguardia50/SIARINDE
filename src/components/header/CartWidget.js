@@ -1,20 +1,28 @@
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import react, {Component} from 'react';
+import React, {Component} from 'react';
 import IconButton from '@mui/material/IconButton';
-import Stack from '@mui/material/Stack';
-import DeleteIcon from '@mui/icons-material/Delete';
-import AlarmIcon from '@mui/icons-material/Alarm';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { UsarContador } from '../ItemCount/contador';
 
-export default class CartWidget extends Component {
-    render(){
-        return(
-            <>
-                <IconButton color="primary" aria-label="add to shopping cart">
-                    <ShoppingCartIcon color="success" fontSize="large"></ShoppingCartIcon>
-                </IconButton>
-            </>
-        )
-    }
+const CartWidget = () => {
+    /* const {final} = UsarContador({stock, inicial}) */
     
+        /* setTimeout(() =>{
+            console.log("hola, la promesa se resolvio correctamente");
+            const cuentaFinal = document.getElementById("inputCantidad");
+            final = cuentaFinal.value
+            console.log(final)
+        }, 2000) */
+
+        
+    return(
+        <>
+            <IconButton color="primary" aria-label="add to shopping cart">
+                <ShoppingCartIcon color="success" fontSize="large"></ShoppingCartIcon>
+                <p>0*</p>
+            </IconButton>
+        </>
+    )
+      
 }
+
+export default CartWidget

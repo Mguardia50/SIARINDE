@@ -1,46 +1,11 @@
-.itemBox{
+.boxAgregarCarrito{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-    height: 400px;
-    width: 300px;
-    background-image: linear-gradient(to left, rgb(1, 43, 1), rgb(0, 122, 0));
-    border: 3px solid black;
-    box-shadow: 3px 3px 6px black;
-}
-
-h3{
-    width: 100%;
-    padding-bottom: 5px;
-    color: silver;
-    background-color: black;
-    text-align: center;
-}
-
-.imgBox{
-    height: 200px;
-    width: 300px;
-    background-color: white;
-    border: 2px solid black;
-}
-
-.imgTienda{
-    height: 100%;
-    width: auto;
-}
-
-.parrafoBox{
-    font-weight: bold;
-    font-size: large;
-    color: white;
-    width: 100%;
-    text-align: center;
+    align-items:flex-end;
+    margin: 0;
 }
 
 #inputCantidad{
-    font-size: larger;
+    font-size: 20px;
     width: 70px;
     text-align: center;
     border: 2px solid black;
@@ -53,11 +18,5 @@ h3{
     width: 200px;
     background-color: silver;
     border: 2px solid black;
-    margin-bottom: 20px;
-}
-
-.boxAgregarCarrito{
-    display: flex;
-    align-items:flex-start;
-    
+    margin-bottom: 0px;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 
+
 export const UsarContador = ({stock, initial, final}) => {
     initial = 0;
     stock = 6;
@@ -44,8 +45,7 @@ export const UsarContador = ({stock, initial, final}) => {
         
     }
 
-    /* const cuentaFinal = document.getElementById("inputCantidad");
-    final = cuentaFinal.value  */
+    
 
     return {
         agregar, quitar, agregarCarrito, contador, final, newStock

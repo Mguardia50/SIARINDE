@@ -1,0 +1,4 @@
+[{"id":1, "Producto":"Pelotas de tenis Babolat Gold", "imagen":{"src": "../assets/pelotasBabolar.jfif"}, "Descripcion":"Pelotas de tenis babolat gold x3 en tubo", "stock":6},
+    {"id":2, "Producto":"Rollo de cuerdas kirchbaum", "imagen":{"src": "../assets/pelotasBabolar.jfif"}, "Descripcion":"Pelotas de tenis babolat gold x3 en tubo", "stock":3}, 
+    {"id":3, "Producto":"Cubregrip generico", "imagen":{"src": "../assets/pelotasBabolar.jfif"}, "Descripcion":"Pelotas de tenis babolat gold x3 en tubo", "stock":5},
+    {"id":4, "Producto":"Muñequera toalson", "imagen":{"src": "../assets/pelotasBabolar.jfif"}, "Descripcion":"Pelotas de tenis babolat gold x3 en tubo", "stock":1}]

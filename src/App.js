@@ -10,8 +10,7 @@ import ItemCount from './components/ItemCount/ItemCount';
       <> 
         <Header></Header>
         {/* <Inicio></Inicio> */}
-        <ItemListContainer greetings="Bienvenido a Siarinde"></ItemListContainer>
-        <ItemCount></ItemCount>
+        <ItemListContainer greetings="BIENVENIDO A SIaRINDE"></ItemListContainer>
       </>
       
       )   

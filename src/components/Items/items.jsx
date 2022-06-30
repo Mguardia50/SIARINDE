@@ -4,6 +4,7 @@ import ItemCount from '../ItemCount/ItemCount';
 
     const Item = ({product}) =>{
         
+       
         return(
         <>
         
@@ -12,18 +13,18 @@ import ItemCount from '../ItemCount/ItemCount';
                 <div className='imgBox'>
                    <img src={product.Imagen} alt="" className='imgTienda'/>
                 </div> 
-                <p className='parrafoBox'>{product.Descripcion} stock: {product.stock}</p>    
+                <p className='parrafoBox'>$ {product.Precio} - {product.Descripcion} stock: {product.stock}</p>  
                 <div className='boxAgregarCarrito'>              
-                <ItemCount></ItemCount>
+                <button className='botonBox'>Agregar</button>
                 </div>
             </div>
     
         </>
         )
-        
-    
-    
     }
+    
+    
+    
 
     export default Item
 

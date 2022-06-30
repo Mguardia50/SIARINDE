@@ -69,8 +69,8 @@ const ItemCount = ({stock, initial}) => {
                             <AddCircleOutlineIcon />
                         </IconButton>
                     </div>    
-                    <IconButton onClick={agregarCarrito} fontSize ="large"  sx={{color: "black", marginLeft: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
-                        <AddShoppingCartIcon />
+                    <IconButton onClick={agregarCarrito}   sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
+                        <AddShoppingCartIcon fontSize ="large"/>
                     </IconButton>
             {/*   </div>
              </div>

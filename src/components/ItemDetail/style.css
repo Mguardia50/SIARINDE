@@ -1,0 +1,106 @@
+.itemDetailBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 40% 30% 20%;
+    grid-template-areas: "titulo titulo"
+                        "imagen box"
+                        "imagen boton"
+                        "descri descri";
+    justify-items: center;
+    align-items: center;
+    margin: 20px;
+    padding-bottom: 5px;
+    height: 600px;
+    width: 80%;
+    background-image: linear-gradient(to left, rgb(1, 43, 1), rgb(0, 122, 0));
+    border: 3px solid black;
+    box-shadow: 3px 3px 6px black;
+}
+
+.imgDetailBox{
+    display: flex;
+    flex-direction: column;
+    grid-area: imagen;
+    width: 90%;
+    height: 90%;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid green;
+    box-shadow: 3px 3px 6px white;
+    margin: 0;
+}
+
+.tituloDetail{
+    grid-area: titulo;
+    font-size: 22px;
+}
+
+.MuiPagination-ul {
+    margin: 0;
+
+    background-color: black;
+    font-size: 20px;
+    color: white;
+}
+
+.css-wjh20t-MuiPagination-ul{
+    margin: 0;
+    border-top: 2px solid green;
+    background-color: rgb(233, 233, 233);
+    font-size: 20px;
+    color: white;
+}
+
+.imgDetailTienda{
+    height: 85%;
+    width: auto;
+    
+}
+
+.parrafoDetailBox{
+    grid-area: descri;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.boxDetailCarrito{
+    display: grid;
+    grid-area: box;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    
+}
+
+.divItemCount{
+display: flex;
+
+}
+.botonDetailBox{
+    grid-area: boton;
+}
+
+li{
+    margin: 5px;
+    font-size: 25px;
+    font-family: 'Neucha', cursive;
+    font-size: bolder;
+    color: white;
+}
+
+.botonDetailBox{
+    padding: 10px;
+    text-align: center;
+    font-family: 'Neucha', cursive;
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 15px black;
+}
+
+.botonDetailBox:hover{
+    
+    box-shadow: 0 0 15px white;
+}

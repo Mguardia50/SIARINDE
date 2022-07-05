@@ -1,0 +1,3 @@
+SIARINDE V0.07
+
+-Se llevo el código del Nav a un nuevo archivo NavBar.js y asi diferenciar el menu de navegacion del header

@@ -1,3 +1,11 @@
 SIARINDE V0.07
 
 -Se llevo el código del Nav a un nuevo archivo NavBar.js y asi diferenciar el menu de navegacion del header
+-Se modificó la navegación; antes era traida al 100% de una libreria, ahora solo los iconos
+-Se creao la carpeta src/paginas donde estará cada pagina de la app
+-Se agregó navegabilidad
+-Se cambió la paleta de colores
+-Se limpiaron algunos comentarios viejos, se pusieron nuevos comentarios
+-Se añadieron categorias de lista de producto en la seccion tienda
+-se añadieron subcategorias (no esta listo)
+-se añadió un reload con un timeout para la navegacion

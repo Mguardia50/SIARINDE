@@ -3,8 +3,13 @@ import React from "react";
 import Header from './components/header/Header';
 import Inicio from './components/body/Inicio';
 import ItemListContainer from './components/itemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
+import Futbol from './paginas/futbol/futbol';
+import Gimnasio from './paginas/gimnasio/gimnasio';
+import Paddle from './paginas/paddle/paddle';
+import Tenis from './paginas/tenis/tenis';
+import Running from './paginas/running/running';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
+
 import {
   BrowserRouter,
   Routes,
@@ -19,9 +24,15 @@ import {
           <Header></Header>
 
           <Routes>
-            <Route path='/' element= {<ItemListContainer></ItemListContainer>}/>
-            <Route path='/deporte/:deporteId' element={<ItemListContainer></ItemListContainer>} />
-            <Route path='/tienda/:tiendaId' element={<ItemDetailContainer></ItemDetailContainer>} />
+            
+            <Route path='/' element= {<Inicio></Inicio>}/>
+            <Route path='/deporte/tenis' element={<Tenis></Tenis>} />
+            <Route path='/deporte/gimnasio' element={<Gimnasio></Gimnasio>} />
+            <Route path='/deporte/running' element={<Running></Running>} />
+            <Route path='/deporte/paddle' element={<Paddle></Paddle>} />
+            <Route path='/deporte/futbol' element={<Futbol></Futbol>} />
+            <Route path='/tienda/:categoria' element={<ItemListContainer></ItemListContainer>} />
+            <Route path='/tienda/general/:tiendaId' element={<ItemDetailContainer></ItemDetailContainer>} />
           </Routes>
         </BrowserRouter>
         {/* <Inicio></Inicio> */}

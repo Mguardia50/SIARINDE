@@ -7,3 +7,9 @@
     font-family: 'Rock Salt', cursive;
     font-size: 50px;
 }
+
+.ContenedorFiltro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

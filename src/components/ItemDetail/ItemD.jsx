@@ -6,7 +6,6 @@ import Pagination from '@mui/material/Pagination';
 
     const ItemD = ({product}) =>{
         
-        if (product.id=1){ //esto se modificara después para que se vea solo el que se clickea
         return(
         <>
         
@@ -18,7 +17,7 @@ import Pagination from '@mui/material/Pagination';
                 </div> 
                 <p className='parrafoDetailBox'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tenetur minima earum laborum rem rerum veniam pariatur totam reprehenderit, quaerat modi illum consequuntur voluptates, quibusdam sequi eligendi asperiores, voluptas sed. - {product.Descripcion} - stock: {product.stock} unidades</p>  
                 
-                    <button className='botonDetailBox'>Agregar al Carrito</button>
+                    {/* <button className='botonDetailBox'>Agregar al Carrito</button> */}
                 
                 
                 <div className='boxDetailCarrito'>
@@ -35,7 +34,7 @@ import Pagination from '@mui/material/Pagination';
     
         </>
         )
-    }
+    
     
     
     }

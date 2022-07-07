@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
 
 
+:root{
+    --colorTexto: rgb(114, 7, 114);
+    }
+
 *{
     padding: 0;
     margin: 0;
@@ -29,16 +33,15 @@ a{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    
-}
-a:hover{
-    color: blue;
-    transform: scale(1.1,1.1);
+    margin: 15px;
+    color: var(--colorTexto);
 }
 
-.MuiButtonBase-root:hover{
-    color: green;
-    
+
+
+.MuiButtonBase-root:hover, a:hover{
+    color: blue;
+    transform: scale(1.1,1.1);
 }
 
 .MuiButtonBase-root:active{
@@ -73,5 +76,8 @@ header{
 p{
     font-family: 'Neucha', cursive;
     margin: 10px;
+    color: var(--colorTexto);
+    text-align: center;
+    font-weight: bold;
 }
 

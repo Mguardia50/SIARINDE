@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 export const UsarContador = ({stock, initial, final}) => {
-    initial = 0;
+    initial = 1;
     stock = 6;
 
     

@@ -15,12 +15,19 @@ import { Link, NavLink} from "react-router-dom";
 
 const NavBar = () =>{
 
-    const categorias = [{name: "Gimnasio", ruta: "/deporte/gimnasio", id: 1, icon: <BottomNavigationAction icon={<FitnessCenterIcon fontSize="large"/>}/>},
-                        {name: "Tenis", ruta: "/deporte/tenis", id: 2, icon: <BottomNavigationAction icon={<SportsTennisIcon fontSize="large"/>} />},
-                        {name: "Paddle", ruta: "/deporte/paddle", id: 3, icon:<BottomNavigationAction icon={<SportsBaseballTwoToneIcon fontSize="large"/>} /> },
-                        {name: "Futbol", ruta: "/deporte/futbol", id: 4, icon: <BottomNavigationAction icon={<SportsSoccerIcon fontSize="large"/>} /> },
-                        {name: "Running", ruta: "/deporte/running", id: 5, icon:<BottomNavigationAction icon={<RunCircleIcon fontSize="large"/>} />},
-                        {name: "Tienda", ruta: "/tienda/general", id: 6, icon:<BottomNavigationAction icon={<AddBusinessIcon fontSize="large"/>} />}
+    const funcionClick = () => {
+        setTimeout(()=>{
+        window.location.reload();
+      }, 500)
+    
+      };
+
+    const categorias = [{name: "Gimnasio", ruta: "/deporte/gimnasio", id: "Nav1", icon: <FitnessCenterIcon fontSize="large"/>},
+                        {name: "Tenis", ruta: "/deporte/tenis", id: "Nav2", icon: <SportsTennisIcon fontSize="large" />},
+                        {name: "Paddle", ruta: "/deporte/paddle", id: "Nav3", icon: <SportsBaseballTwoToneIcon fontSize="large" /> },
+                        {name: "Futbol", ruta: "/deporte/futbol", id: "Nav4", icon: <SportsSoccerIcon fontSize="large" /> },
+                        {name: "Running", ruta: "/deporte/running", id: "Nav5", icon:<RunCircleIcon fontSize="large"/>},
+                        {name: "Tienda", ruta: "/tienda/general", id: "Nav6", icon:<AddBusinessIcon fontSize="large" onClick={funcionClick}/>}
                     ]
 
 

@@ -16,8 +16,8 @@ h3{
     font-size: 15px;
     width: 100%;
     padding-bottom: 5px;
-    color: silver;
-    background-color: black;
+    color: white;
+    background-color: var(--colorTexto);
     text-align: center;
 }
 h4{
@@ -35,6 +35,7 @@ h4{
 .imgTienda{
     height: 100%;
     width: auto;
+    object-fit: contain;
 }
 
 .parrafoBox{

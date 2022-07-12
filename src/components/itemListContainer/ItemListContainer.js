@@ -10,8 +10,7 @@ const ItemListContainer = ({greetings}) => {
 
     const[productList, setProductList] =useState([])
     
-/*    ESTOY INTENDANDO USAR EL JSON, pero aparentemente react te renderiza todo por lo que hay tokens < y por el momento....NO PUEDO
-¿Tengo que convertir el JSON en un HTML??????....react =  dictador (no brinda libertad de codigo)
+/*    
 
 async function getProducts(){
         const respuestaProductos = await fetch('../JSON/productos.json');

@@ -9,7 +9,8 @@ import Paddle from './paginas/paddle/paddle';
 import Tenis from './paginas/tenis/tenis';
 import Running from './paginas/running/running';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
-
+import CustomProvider from './components/API/ListaDeProductos';
+import CartComprado from './components/cart/Cart';
 import {
   BrowserRouter,
   Routes,
@@ -18,7 +19,7 @@ import {
 
     const App = () =>{
       return (
-      <> 
+      <CustomProvider>
         
         <BrowserRouter>
           <Header></Header>
@@ -33,12 +34,11 @@ import {
             <Route path='/deporte/futbol' element={<Futbol></Futbol>} />
             <Route path='/tienda/:categoria' element={<ItemListContainer></ItemListContainer>} />
             <Route path='/tienda/general/:tiendaId' element={<ItemDetailContainer></ItemDetailContainer>} />
+            <Route path='/tienda/cart' element={<CartComprado></CartComprado>} />
           </Routes>
         </BrowserRouter>
-        {/* <Inicio></Inicio> */}
-     {/*    <ItemListContainer greetings="BIENVENIDO A SIaRINDE"></ItemListContainer>
-        <ItemDetailContainer titulo="Producto Detallado (Se quita esto más adelante)"></ItemDetailContainer>
-      */} </>
+        
+      </CustomProvider> 
       
       )   
     }

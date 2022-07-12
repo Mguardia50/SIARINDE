@@ -20,3 +20,17 @@
     border: 2px solid black;
     margin-bottom: 10px;
 }
+
+.btnContador:hover{
+    color: var(--colorTexto);
+    transform: scale(1.1,1.1);
+}
+
+.btnVolverTG{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    background-color: var(--colorTexto);
+}
+

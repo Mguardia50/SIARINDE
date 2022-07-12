@@ -1,3 +1,12 @@
+SIARINDE V0.08
+
+-Se agregaron algunos context para que se pueda tener el stock detallado de cada item
+-....¿Se sincronizo el contador?
+-Ahora cuando se clickea sobre el carrito en el itemdetail te lleva a la pagina CART
+
+
+
+
 SIARINDE V0.07
 
 -Se llevo el código del Nav a un nuevo archivo NavBar.js y asi diferenciar el menu de navegacion del header

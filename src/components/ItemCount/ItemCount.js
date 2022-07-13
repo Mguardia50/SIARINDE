@@ -36,11 +36,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
                         </IconButton>
                     </div>
                     <>  
-                    {contador ? <IconButton  className="btnContador" onClick={onAdd(contador)}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
+                    {contador ? <Link to="/tienda/cart"><IconButton  className="btnContador" onClick={onAdd(contador)}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
                         <AddShoppingCartIcon fontSize ="large"/>
-                    </IconButton> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
+                    </IconButton></Link> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
                     </>  
-                    {/* <Link to="/tienda/cart"></Link> (ahi lo vuelvo a poner)*/}
+                 
     </>
     )
 

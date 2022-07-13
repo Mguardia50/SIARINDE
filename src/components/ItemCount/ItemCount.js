@@ -15,10 +15,13 @@ const primary = grey[900];
 
 
 
-const ItemCount = ({stock, initial}) => {
-    const {agregar, quitar, agregarCarrito, contador, newStock} = UsarContador({stock, initial}) //algo aca no esta bien....
+const ItemCount = ({stock, initial, onAdd}) => {
+    const {agregar, quitar, agregarCarrito, contador, newStock} = UsarContador({stock, initial, onAdd}) //algo aca no esta bien....
 
-   
+    /* console.log("el contador de  contadorjs seria" + contador) */
+    console.log("este seria el onAdd" + onAdd) 
+
+
 
     return(
         <>
@@ -33,11 +36,11 @@ const ItemCount = ({stock, initial}) => {
                         </IconButton>
                     </div>
                     <>  
-                    {contador ? <Link to="/tienda/cart"><IconButton onClick={agregarCarrito} className="btnContador"   sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
+                    {contador ? <IconButton  className="btnContador" onClick={onAdd(contador)}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
                         <AddShoppingCartIcon fontSize ="large"/>
-                    </IconButton></Link> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
+                    </IconButton> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
                     </>  
-      
+                    {/* <Link to="/tienda/cart"></Link> (ahi lo vuelvo a poner)*/}
     </>
     )
 

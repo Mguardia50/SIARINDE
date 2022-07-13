@@ -2,10 +2,19 @@ import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import "./style.css";
 import Pagination from '@mui/material/Pagination';
+import { useState } from 'react';
 
 
     const ItemD = ({product}) =>{
-        
+
+        const [isAdded, setIsAdded] = useState(null)
+
+        function addHandler(qtyToAdd){
+            setIsAdded(qtyToAdd) //esto es lo que pongo como "onAdd(contador)"
+            console.log("este valor de handler seria " + qtyToAdd)
+        }
+
+
         return(
         <>
         
@@ -22,7 +31,7 @@ import Pagination from '@mui/material/Pagination';
                 
                 <div className='boxDetailCarrito'>
                     <div className='divItemCount'>
-                        <ItemCount></ItemCount>
+                        <ItemCount initial={1} onAdd={addHandler}></ItemCount>
                     </div>              
                     
                     <ul>

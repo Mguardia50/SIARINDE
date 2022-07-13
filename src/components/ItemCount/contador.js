@@ -5,8 +5,8 @@ import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { Link} from "react-router-dom";
 
-export const UsarContador = ({stock, initial, final}) => {
-    initial = 1;
+export const UsarContador = ({stock, initial, onAdd}) => {
+    
     
 
     const parametroId = useParams();
@@ -26,7 +26,7 @@ export const UsarContador = ({stock, initial, final}) => {
     /* console.log("el stock es " + stock) */
     const [newStock, setStock] = useState(stock)
     const [contador, setContador] = useState(initial)
-
+    
 
     const agregar = () => {
         /* console.log(contador)
@@ -53,11 +53,11 @@ export const UsarContador = ({stock, initial, final}) => {
 
     }
 
-    function agregarCarrito(e) {
-
+     function agregarCarrito() {
+        
         //Ahora necesito que en el objeto se remplace el stock existente con el nuevo
         //e.preventDefault() -> si hago esto, no va al link
-        final = contador;
+        
         setStock(newStock - contador);
         const stockActual = newStock - contador;
         console.log("el stock era de " + newStock + ", ahora es de " + stockActual)
@@ -66,11 +66,11 @@ export const UsarContador = ({stock, initial, final}) => {
         
         
         
-    }
+    } 
 
     
 
     return {
-        agregar, quitar, agregarCarrito, contador, final, newStock
+        agregar, quitar, agregarCarrito, contador, onAdd, newStock
     }
 }

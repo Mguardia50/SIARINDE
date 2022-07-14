@@ -10,10 +10,19 @@ import SportsBaseballTwoToneIcon from '@mui/icons-material/SportsBaseballTwoTone
 import AddBusinessIcon from '@mui/icons-material/AddBusiness';
 import AccountMenu from "./MenuNav";
 import CartWidget from "./CartWidget";
+import { cartContext } from '../API/ListaDeProductos';
+import { useContext } from 'react';
 import { Link, NavLink} from "react-router-dom";
 
 
+
+
+
+
 const NavBar = () =>{
+
+
+    const {qty} = useContext(cartContext)
 
     const funcionClick = () => {
         setTimeout(()=>{
@@ -61,7 +70,7 @@ const NavBar = () =>{
         </nav>
     
           <div className="CartMenu">
-              <CartWidget numeroCarrito={0}></CartWidget>
+              <CartWidget numeroCarrito={qty}></CartWidget>
               <AccountMenu id="MenuCuenta"></AccountMenu>
           </div>
     </>

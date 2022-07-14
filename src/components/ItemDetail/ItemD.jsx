@@ -31,7 +31,7 @@ import { useState } from 'react';
                 
                 <div className='boxDetailCarrito'>
                     <div className='divItemCount'>
-                        <ItemCount initial={1} onAdd={addHandler}></ItemCount>
+                        <ItemCount initial={1} stock={product.stock} onAdd={addHandler}></ItemCount>
                     </div>              
                     
                     <ul>

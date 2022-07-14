@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import IconButton from '@mui/material/IconButton';
 import { UsarContador } from '../ItemCount/contador';
 
-const CartWidget = () => {
+const CartWidget = ({numeroCarrito}) => {
     /* const {final} = UsarContador({stock, inicial}) */
     
         /* setTimeout(() =>{
@@ -18,7 +18,7 @@ const CartWidget = () => {
         <>
             <IconButton color="primary" aria-label="add to shopping cart">
                 <ShoppingCartIcon color="success" fontSize="large"></ShoppingCartIcon>
-                <p>0*</p>
+                <p>{numeroCarrito}</p>
             </IconButton>
         </>
     )

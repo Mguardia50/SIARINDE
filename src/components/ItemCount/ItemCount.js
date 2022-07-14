@@ -19,7 +19,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
     const {agregar, quitar, agregarCarrito, contador, newStock} = UsarContador({stock, initial, onAdd}) //algo aca no esta bien....
 
     /* console.log("el contador de  contadorjs seria" + contador) */
-    console.log("este seria el onAdd" + onAdd) 
+    /* console.log("este seria el onAdd" + onAdd)  */
 
 
 
@@ -30,15 +30,17 @@ const ItemCount = ({stock, initial, onAdd}) => {
                         <IconButton onClick={quitar} className="btnContador" sx={{ color: lightBlue[900] }}>
                             <RemoveCircleOutlineIcon />
                         </IconButton>
-                        <input type="number" id='inputCantidad' value={contador}></input>
+                        {contador? <input type="number" id='inputCantidad' value={contador}></input> : <p></p>}
                         <IconButton onClick={agregar} className="btnContador" color ="success" >
                             <AddCircleOutlineIcon />
                         </IconButton>
                     </div>
                     <>  
-                    {contador ? <Link to="/tienda/cart"><IconButton  className="btnContador" onClick={onAdd(contador)}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
+                    {contador ? <Link to="/tienda/cart"><IconButton  className="btnContador" onClick={agregarCarrito}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
                         <AddShoppingCartIcon fontSize ="large"/>
-                    </IconButton></Link> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
+                    </IconButton> </Link> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
+                    {/* onClick={onAdd(contador)} esto lo eliminamos */}
+                    {/* <Link to="/tienda/cart"> */}
                     </>  
                  
     </>

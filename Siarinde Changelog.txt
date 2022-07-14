@@ -1,3 +1,9 @@
+SIARINDE V0.09
+-Se agrego context para que se cree un nuevo array al hacer un pedido
+-Ahora cuando se carga un pedido se suma al carrito
+-En caso de ya estar pedido un producto, ahora ya no se podrá pedir
+
+
 SIARINDE V0.08
 
 -Se agregaron algunos context para que se pueda tener el stock detallado de cada item

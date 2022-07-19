@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
+.imagenPedorra{
 
+  height: 70%;
+  width: 70%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

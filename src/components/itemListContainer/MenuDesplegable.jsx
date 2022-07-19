@@ -14,6 +14,7 @@ export default function BasicMenu() {
     setAnchorEl(null);
     window.location.reload();
   };
+  
   const funcionClick = () => {
     setTimeout(()=>{
       setAnchorEl(null);

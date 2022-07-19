@@ -1,3 +1,9 @@
+SIARINDE V0.1
+-Ahora podes agregar items al carrito el cual se mostrara cuantos items hay en el menu carrito del NavBar
+-En la pagina cart podes gestionar tu pedido, comprar, eliminar, etc.
+-Cambios en renderizado condicional; aparecen, cambian, desaparecen botones según condición
+-Ya no hace refresh page si clickeas en tienda, pero si en categoria
+
 SIARINDE V0.09
 -Se agrego context para que se cree un nuevo array al hacer un pedido
 -Ahora cuando se carga un pedido se suma al carrito

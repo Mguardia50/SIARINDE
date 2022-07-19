@@ -26,7 +26,7 @@ const NavBar = () =>{
 
     const funcionClick = () => {
         setTimeout(()=>{
-        window.location.reload();
+        /* window.location.reload(); */
       }, 500)
     
       };
@@ -70,7 +70,7 @@ const NavBar = () =>{
         </nav>
     
           <div className="CartMenu">
-              <CartWidget numeroCarrito={qty}></CartWidget>
+          <Link to="/tienda/cart"><CartWidget numeroCarrito={qty}></CartWidget></Link>
               <AccountMenu id="MenuCuenta"></AccountMenu>
           </div>
     </>

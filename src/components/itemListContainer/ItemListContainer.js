@@ -5,9 +5,28 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import BasicMenu from './MenuDesplegable';
 import { useParams } from 'react-router-dom';
+import {db} from '../../firebase/firebase';
+import {getDocs, collection, query, where} from 'firebase/firestore'; //como no tiene nada lo trae de node modules
+
+
 
 const ItemListContainer = ({greetings}) => {
 
+    useEffect(() =>{
+        const productsCollection = collection(db, 'productos')
+        const q = query(productsCollection, where('categoria', '==', 'tenis')); //con equery creamos filtros
+        getDocs(productsCollection)
+        .then(result =>{
+            result.map(product => {
+                return {
+                    id: product.id, 
+                    ...product.data(),
+                }
+            })
+            //aca va un setProducts
+        })
+    })
+    
     const[productList, setProductList] =useState([])
     
 /*    
@@ -92,7 +111,7 @@ return(
                 <FormControlLabel control={<Checkbox defaultChecked />} label="CUERDAS" />
                 <FormControlLabel control={<Checkbox defaultChecked />} label="ACCESORIOS" />
                 <FormControlLabel control={<Checkbox defaultChecked />} label="ROPA" />
-                <p>PARA ESTO VAMOS A USAR UN USESTATE MÁS ADELANTE</p>
+                <p>Los checkbox van a ir más adelante; idem que cambie el stock cuando esté en el carrito; no que desaparezca por si quiero agregar más</p>
         <ItemList productList={productList}/>
     </div>
 )

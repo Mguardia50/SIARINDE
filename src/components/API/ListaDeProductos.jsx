@@ -20,8 +20,8 @@ import React, {createContext, useContext, useState} from 'react'
     )
     
     const [compras, setCompras]= useState([])
+    const [totalPesos, setTotalPesos] = useState()
 
-    
 
 
     /* const getQtyProducts = () =>{} */
@@ -35,7 +35,7 @@ import React, {createContext, useContext, useState} from 'react'
         const producto = productosDetallados.find(compra => compra.id == id);
         /* console.log("esto es el producto " + qty + producto ) */
         
-        setCompras([...compras, {id: producto.id, Nombre: producto.Nombre, cantidad: qty}])
+        setCompras([...compras, {id: producto.id, Nombre: producto.Nombre, cantidad: qty, precio: producto.Precio}])
         console.log("esto es la compra " + JSON.stringify(compras))
         
        
@@ -44,6 +44,8 @@ import React, {createContext, useContext, useState} from 'react'
 
     const eliminarProducto = (id) => {
 
+        setCompras(compras.filter(product => product.id !== id))
+        console.log("el eliminado es " + compras)
     }
 
     const isInCart = (id) =>{
@@ -55,14 +57,17 @@ import React, {createContext, useContext, useState} from 'react'
         
     }
 
-    const obtenerCantidad = () =>{
+    const totalPrecio = () =>{
+        
+        compras.forEach(element => setTotalPesos(totalPesos += compras.precio * compras.cantidad));
 
+        console.log("el total es: $" + totalPesos);
     }
 
 
 
     return (
-       <Provider value={{productosDetallados, addProduct, obtenerCantidad, isInCart, qty, compras}}>
+       <Provider value={{productosDetallados, addProduct, totalPrecio, isInCart, eliminarProducto, qty, compras, totalPesos}}>
             {children}
         </Provider>
     )

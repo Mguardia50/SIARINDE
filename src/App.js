@@ -7,6 +7,7 @@ import Futbol from './paginas/futbol/futbol';
 import Gimnasio from './paginas/gimnasio/gimnasio';
 import Paddle from './paginas/paddle/paddle';
 import Tenis from './paginas/tenis/tenis';
+import FinalizarPedido from './paginas/finalizarPedido/finalizarPedido';
 import Running from './paginas/running/running';
 import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import CustomProvider from './components/API/ListaDeProductos';
@@ -35,6 +36,7 @@ import {
             <Route path='/tienda/:categoria' element={<ItemListContainer></ItemListContainer>} />
             <Route path='/tienda/general/:tiendaId' element={<ItemDetailContainer></ItemDetailContainer>} />
             <Route path='/tienda/cart' element={<CartComprado></CartComprado>} />
+            <Route path='/finalizarPedido' element={<FinalizarPedido></FinalizarPedido>} />
           </Routes>
         </BrowserRouter>
         

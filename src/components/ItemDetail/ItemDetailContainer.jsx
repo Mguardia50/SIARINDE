@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
+import {SIARINDE} from '../../firebase/firebase';
+import {doc, getDoc, collection, query, where} from 'firebase/firestore';
 
 const ItemDetailContainer = ({titulo}) => {
 
+
     const parametroId = useParams();
+//con esto busco los datos de firebase
+  /*   useEffect(() => {
+        const productCollection = collection(db, 'productos');
+        const refDoc = doc(productCollection, productId)
+        getDoc(refDoc).then(result =>{
+            setProduct(result.data())
+        })
+    }) */
+
+    
     /* console.log("el parametro es " + parametroId.tiendaId); */
 
     const[productDetail, setProductDetail] =useState([]) //-> Acá definimos dos cosas, la constante product detail, o sea, mi producto en cuestrion y, el set que nos va a ayudar a cambiar de estado, una actualización en la pagina digamos

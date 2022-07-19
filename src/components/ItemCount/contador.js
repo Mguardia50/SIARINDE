@@ -70,7 +70,7 @@ export const UsarContador = ({stock, initial, onAdd}) => {
  */
 
         if (isInCart(idDelProducto)){
-
+            
             console.log("ya esta en el carrito")
             return
 

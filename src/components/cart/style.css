@@ -1,0 +1,39 @@
+
+.boxCart{
+    display: flex;
+}
+
+.botonesCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ninguna{
+    display: none;
+}
+
+.btnQuitar{
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+    margin-left: 10px;
+}
+
+.btnQuitar:hover{
+    transform: scale(1.2,1.2);
+}
+
+.TotalCompra{
+    font-size: 25px;
+}
+
+.CartBoxContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+}

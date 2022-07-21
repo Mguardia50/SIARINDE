@@ -18,8 +18,8 @@ const primary = grey[900];
 const ItemCount = ({stock, initial, onAdd}) => {
     const {agregar, quitar, agregarCarrito, contador, newStock} = UsarContador({stock, initial, onAdd}) //algo aca no esta bien....
 
-    /* console.log("el contador de  contadorjs seria" + contador) */
-    /* console.log("este seria el onAdd" + onAdd)  */
+    /* console.log("qerty el stock es " + stock ) hasta aca vamos bien */
+
 
 
 

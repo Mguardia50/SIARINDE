@@ -1,3 +1,8 @@
+SIARINDE V0.11
+-Ahora trae los productos desde firebaseapp
+-Ya no hace un windows reload cuando se agrega productos
+-el carrito esta roto...
+
 SIARINDE V0.1
 -Ahora podes agregar items al carrito el cual se mostrara cuantos items hay en el menu carrito del NavBar
 -En la pagina cart podes gestionar tu pedido, comprar, eliminar, etc.

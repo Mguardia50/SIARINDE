@@ -12,14 +12,10 @@ export default function BasicMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    window.location.reload();
   };
   
   const funcionClick = () => {
-    setTimeout(()=>{
       setAnchorEl(null);
-    window.location.reload();
-  }, 500)
 
   };
 

@@ -9,11 +9,14 @@ import { useState } from 'react';
 
         const [isAdded, setIsAdded] = useState(null)
 
+        /* console.log("emmmmm estemmmm emmmm " + product.Stock) funciona, me muestra el stock bien */
+
         function addHandler(qtyToAdd){
             setIsAdded(qtyToAdd) //esto es lo que pongo como "onAdd(contador)"
             console.log("este valor de handler seria " + qtyToAdd)
         }
 
+        
 
         return(
         <>
@@ -31,7 +34,7 @@ import { useState } from 'react';
                 
                 <div className='boxDetailCarrito'>
                     <div className='divItemCount'>
-                        <ItemCount initial={1} stock={product.stock} onAdd={addHandler}></ItemCount>
+                        <ItemCount initial={1} stock={product.Stock} onAdd={addHandler}></ItemCount>
                     </div>              
                     
                     <ul>

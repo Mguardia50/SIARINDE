@@ -17,7 +17,7 @@ import { Link} from "react-router-dom";
                     </div> 
                 </div>
                 
-                <p className='parrafoBox'>$ {product.Precio} - {product.Descripcion} stock: {product.stock}</p>  
+                <p className='parrafoBox'> {product.Descripcion} - ${product.Precio} - Stock: {product.Stock}</p>  
                 <div className='boxAgregarCarrito'>              
                 <Link to={`/tienda/general/${product.id}`}><button className='botonBox'>COMPRAR</button></Link>
                 </div>

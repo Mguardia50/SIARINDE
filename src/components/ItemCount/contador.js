@@ -4,9 +4,10 @@ import CustomProvider from '../API/ListaDeProductos';
 import { cartContext } from '../API/ListaDeProductos';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
-import { Link} from "react-router-dom";
+import { db } from '../../firebase/firebase';
+import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
 
-export const UsarContador = ({stock, initial, onAdd}) => {
+export const UsarContador = ({stock, initial, onAdd, product}) => {
     
     
     const parametroId = useParams();
@@ -14,23 +15,11 @@ export const UsarContador = ({stock, initial, onAdd}) => {
     /*  const {productosDetallados, setProductosDetallados} = useContext(contextProductos) */
      const {addProduct, isInCart} = useContext(cartContext)
    
-     /* const busquedaStock = productosDetallados.find((elemento) => elemento.id == parametroId.tiendaId) */
-     /* console.log("el producto detallado es " + JSON.stringify(productosDetallados) )
-     console.log("mientras que el resultado de busqueda es " + JSON.stringify(resultadoBusqueda)) */
-  
-     
-    //const productoFiltrado = new busquedaStock ()
-    
-
-    /* stock = busquedaStock.stock */ 
-    /* console.log("el stock es " + stock) */
 
     let newStock = stock
     const [contador, setContador] = useState(initial)
-
+    const [idVenta, setIdVenta] = useState()
     
-    console.log("el neustoc es " + newStock + " el contador es " + contador) //Por que me da undefined??
-    console.log("el fucking stock es " + stock + typeof(stock))
 
     const agregar = () => {
         /* console.log(contador)
@@ -43,7 +32,8 @@ export const UsarContador = ({stock, initial, onAdd}) => {
         }
 
         if (contador < newStock) {
-            setContador(contador + 1); 
+            setContador(contador + 1);
+            
         }
         else{
             console.log("No hay más stock");
@@ -56,6 +46,7 @@ export const UsarContador = ({stock, initial, onAdd}) => {
       
         if (contador >0){
             setContador(contador - 1); 
+            
         }
         else{
             console.log("no puede ser negativo");
@@ -79,7 +70,17 @@ export const UsarContador = ({stock, initial, onAdd}) => {
 
         }
 
-            addProduct(contador, idDelProducto);
+            /* const ventasCollection = collection(db, 'ventas');
+            addDoc(ventasCollection, { 
+                items: [{nombre: "cataplasma"}],
+                fecha: serverTimestamp(),
+                total: "esto lo saco del context"
+            })
+            .then((result) => {setIdVenta(result.id)      })
+            const updateCollection = doc(db, "productos", "aca iria el id");
+            updateDoc(updateCollection, {stock:10})  */
+
+            addProduct(contador, product);
             
            newStock = newStock - contador;
             const stockActual = newStock - contador;

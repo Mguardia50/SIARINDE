@@ -10,12 +10,6 @@ function CartBox() {
     const {compras} = useContext(cartContext)
 
 
-
-/* 
-    const comprasTotales = JSON.stringify(compras)
-
-    console.log(comprasTotales) */
-    
     
     return (
     
@@ -23,7 +17,10 @@ function CartBox() {
 
         {compras.map(compra =>
             <div className="boxCart">
-            <p>{compra.Nombre}</p>,
+            <p>{compra.Nombre}</p>
+            <button className="btnQuitar" onClick={() => console.log(JSON.stringify(compra))}>-</button>
+            <p>{compra.cantidad}</p>
+            <button className="btnQuitar" onClick={() => console.log(JSON.stringify(compra))}>+</button>
             <p>TOTAL: ${compra.precio * compra.cantidad}</p>
             <button className="btnQuitar" onClick={() => eliminarProducto(compra.id)}>Eliminar</button>
         </div>

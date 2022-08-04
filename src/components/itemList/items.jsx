@@ -1,11 +1,16 @@
 import React from 'react';
 import "./style.css";
-import ItemCount from '../ItemCount/ItemCount';
 import { Link} from "react-router-dom";
+import { cartContext } from '../API/ListaDeProductos';
+import { useContext } from 'react';
 
     const Item = ({product}) =>{
         
-       
+        const {isInCart} = useContext(cartContext)
+
+        if (isInCart(product.id)){
+            return
+        }
         return(
         <>
         

@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useState} from 'react'
+import React, {createContext, useState} from 'react'
 
 
 
@@ -14,17 +14,16 @@ import React, {createContext, useContext, useState} from 'react'
 
 
 
-    /* const getQtyProducts = () =>{} */
+   
         let qty = 0
         compras.forEach(compra => qty += 1)
-        console.log("la getQtyProducts da : " + qty)
         
    
 
-    const addProduct = (qty, product) => {
+    const addProduct = (qty, product, idDelProducto) => {
         
         
-        setCompras([...compras, {Nombre: product.Nombre, cantidad: qty, precio: product.Precio}])
+        setCompras([...compras, {id: idDelProducto, Nombre: product.Nombre, cantidad: qty, precio: product.Precio}])
         console.log("esto es la compra " + JSON.stringify(compras))
         
        
@@ -33,16 +32,14 @@ import React, {createContext, useContext, useState} from 'react'
 
     const eliminarProducto = (id) => {
 
+        
         setCompras(compras.filter(product => product.id !== id))
         console.log("el eliminado es " + compras)
     }
 
     const isInCart = (id) =>{
-        /* const encontrado = productosDetallados.find(compra => compra.id == id);
-        encontrado ? true : false;
-        console.log("el isInCart es: "  + JSON.stringify(encontrado)) */
-
-        return compras.some(compra => compra.id == id) //remplaza a lo de arriba
+   
+        return compras.some(compra => compra.id === id) 
         
     }
 

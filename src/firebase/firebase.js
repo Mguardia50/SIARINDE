@@ -11,7 +11,7 @@ const firebaseConfig = {
   messagingSenderId: process.env.messagingSenderId,
   appId: process.env.appId,
   measurementId: process.env.measurementId,
-
+  
   apiKey: "AIzaSyBWV8aaUfyru7ecvj2uT0-9bRkEkQsYajs",
   authDomain: "siarinde.firebaseapp.com",
   projectId: "siarinde",

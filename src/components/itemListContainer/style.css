@@ -10,6 +10,18 @@
 
 .ContenedorFiltro{
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}
+
+.menuDesplegable{
+    font-family: 'Rock Salt', cursive;
+    margin-left: 10px;
+}
+
+.pagTienda{
+    display: flex;
 }

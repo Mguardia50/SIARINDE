@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import "./style.css";
 import ItemList from '../itemList/ItemList';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import BasicMenu from './MenuDesplegable';
 import { useParams } from 'react-router-dom';
 import {db} from '../../firebase/firebase';
-import {getDocs, collection, query, where} from 'firebase/firestore'; //como no tiene nada lo trae de node modules
+import {getDocs, collection, query, where} from 'firebase/firestore';
 
 
 
-const ItemListContainer = ({greetings}) => {
+const ItemListContainer = () => {
 
     const[productList, setProductList] =useState([])
-    const[loaded, setLoaded] = useState(true)
+   const[loaded, setLoaded] = useState(true)
 
     
     const parametroCategoria = useParams();
@@ -26,9 +24,7 @@ const ItemListContainer = ({greetings}) => {
 
         let q = query(productsCollection, where('Categoria', '==', parametroCategoria.categoria))
 
-        console.log(tiendaGeneral)
-
-        if (tiendaGeneral == "general"){ q = collection(db, 'productos')}
+        if (tiendaGeneral === "general"){ q = collection(db, 'productos')}
            
         getDocs(q)
         .then(result =>{ 
@@ -39,7 +35,7 @@ const ItemListContainer = ({greetings}) => {
                 }
             })
             setProductList(lista);
-             console.log(lista);
+            
         
         })
         .catch(err => console.log(err))
@@ -51,18 +47,14 @@ const ItemListContainer = ({greetings}) => {
 
 return(
     <div className='Saludar'>
-        <span>{greetings}</span>
-        <div className='ContenedorFiltro'>
-            <h4>Lista de productos: </h4>
-            <BasicMenu></BasicMenu>
-        </div>
         
-                <FormControlLabel control={<Checkbox defaultChecked />} label="PELOTAS" id='CBPelotas' />
-                <FormControlLabel control={<Checkbox defaultChecked />} label="CUERDAS" />
-                <FormControlLabel control={<Checkbox defaultChecked />} label="ACCESORIOS" />
-                <FormControlLabel control={<Checkbox defaultChecked />} label="ROPA" />
-                <p>Los checkbox van a ir más adelante; idem que cambie el stock cuando esté en el carrito; no que desaparezca por si quiero agregar más</p>
-        <ItemList productList={productList}/>
+        <div className='pagTienda'>
+            <div className='ContenedorFiltro'>
+                <BasicMenu></BasicMenu>
+            </div>
+
+            <ItemList productList={productList}/>
+        </div>
     </div>
 )
 

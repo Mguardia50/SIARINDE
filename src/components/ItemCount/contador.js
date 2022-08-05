@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { cartContext } from '../API/ListaDeProductos';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { db } from '../../firebase/firebase';
+import { doc, updateDoc } from 'firebase/firestore';
 
 
 export const UsarContador = ({stock, initial, onAdd, product}) => {
@@ -15,7 +17,7 @@ export const UsarContador = ({stock, initial, onAdd, product}) => {
 
     let newStock = stock
     const [contador, setContador] = useState(initial)
-    const [idVenta, setIdVenta] = useState()
+    
     
 
     const agregar = () => {
@@ -51,41 +53,36 @@ export const UsarContador = ({stock, initial, onAdd, product}) => {
 
     }
 
-     function agregarCarrito() {
+     function AgregarCarrito() {
         
-        
-
         if (isInCart(idDelProducto)){
             
             console.log("ya esta en el carrito")
             return
 
         }
-
-            /* const ventasCollection = collection(db, 'ventas');
-            addDoc(ventasCollection, { 
-                items: [{nombre: "cataplasma"}],
-                fecha: serverTimestamp(),
-                total: "esto lo saco del context"
-            })
-            .then((result) => {setIdVenta(result.id)      })
-            const updateCollection = doc(db, "productos", "aca iria el id");
-            updateDoc(updateCollection, {stock:10})  */
-           
+      
             addProduct(contador, product, idDelProducto);
             
-           newStock = newStock - contador;
             const stockActual = newStock - contador;
-            console.log("el stock era de " + newStock + ", ahora es de " + stockActual)
+
             setContador(0);
-        
-        
+            
+            if (stockActual > 0) {
+
+            
+                const updateCollection = doc(db, "productos", idDelProducto);
+
+                updateDoc(updateCollection, {Stock: stockActual})
+                    
+           
+            }
         
     } 
 
     
 
     return {
-        agregar, quitar, agregarCarrito, contador, onAdd, newStock
+        agregar, quitar, AgregarCarrito, contador, onAdd, newStock
     }
 }

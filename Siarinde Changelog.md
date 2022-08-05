@@ -1,3 +1,9 @@
+### SIARINDE V0.16
+* Ahora se sube el monto total al servidor firestore
+* Se actualiza el stock cuando se oprime el boton carrito en el itemDetail
+* Cuando se presiona eliminar, se vuelve a actualizar el stock con el valor anterior
+* A Corregir: si se refresca la página sin finalizat la compra, el stock se queda con el valor nuevo
+
 ### SIARINDE V0.15
 * Se eliminaron comentarios y código sin uso
 * Se arreglo el carrito, ahora muestra la cantidad de productos

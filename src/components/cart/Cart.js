@@ -33,7 +33,7 @@ function CartComprado() {
         </div>
         <div className="botonesCarrito">
             <Link to="/tienda/general"><button className='btnVolverTG'>{totalPesos === 0 ? "IR A COMPRAR" : "SEGUIR COMPRANDO"}</button></Link>
-           {<Link className={`${totalPesos === 0 ? "ninguna" : ""}`} to="/finalizarPedido"><SubirCompra></SubirCompra></Link>}
+           {<Link className={`${totalPesos === 0 ? "ninguna" : ""}`} to="/finalizarPedido"><SubirCompra montoFinal={totalPesos}></SubirCompra></Link>}
         </div>
         
     </>

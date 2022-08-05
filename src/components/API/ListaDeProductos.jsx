@@ -1,5 +1,6 @@
 import React, {createContext, useState} from 'react'
-
+import { db } from '../../firebase/firebase';
+import { doc, updateDoc } from 'firebase/firestore';
 
 
 
@@ -11,8 +12,7 @@ import React, {createContext, useState} from 'react'
     
     const [compras, setCompras]= useState([])
     const [totalPesos, setTotalPesos] = useState()
-
-
+    
 
    
         let qty = 0
@@ -21,20 +21,20 @@ import React, {createContext, useState} from 'react'
    
 
     const addProduct = (qty, product, idDelProducto) => {
-        
-        
-        setCompras([...compras, {id: idDelProducto, Nombre: product.Nombre, cantidad: qty, precio: product.Precio}])
-        console.log("esto es la compra " + JSON.stringify(compras))
-        
-       
-
+         
+        setCompras([...compras, {id: idDelProducto, Nombre: product.Nombre, cantidad: qty, precio: product.Precio, stock: product.Stock}])
     }
 
-    const eliminarProducto = (id) => {
+    const eliminarProducto = (id, stock) => {
 
         
+        const updateCollection = doc(db, "productos", id);
+
+        updateDoc(updateCollection, {Stock: stock});
+
         setCompras(compras.filter(product => product.id !== id))
-        console.log("el eliminado es " + compras)
+
+        
     }
 
     const isInCart = (id) =>{
@@ -47,7 +47,6 @@ import React, {createContext, useState} from 'react'
         
         compras.forEach(element => setTotalPesos(totalPesos += compras.precio * compras.cantidad));
 
-        console.log("el total es: $" + totalPesos);
     }
 
 

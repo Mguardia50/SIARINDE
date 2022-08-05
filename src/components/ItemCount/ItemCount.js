@@ -11,7 +11,7 @@ import "./style.css"
 
 
 const ItemCount = ({stock, initial, onAdd, product}) => {
-    const {agregar, quitar, agregarCarrito, contador} = UsarContador({stock, initial, onAdd, product}) 
+    const {agregar, quitar, AgregarCarrito, contador} = UsarContador({stock, initial, onAdd, product}) 
 
 
 
@@ -31,7 +31,7 @@ const ItemCount = ({stock, initial, onAdd, product}) => {
                         </IconButton>
                     </div>
                     <>  
-                    {contador ? <Link to="/tienda/cart"><IconButton  className="btnContador" onClick={agregarCarrito}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
+                    {contador ? <Link to="/tienda/cart"><IconButton  className="btnContador" onClick={AgregarCarrito}  sx={{ color: "black", marginLeft: '20px', marginBottom: '10px', backgroundColor: 'silver', border: '2px solid black' }}>
                         <AddShoppingCartIcon fontSize ="large"/>
                     </IconButton> </Link> : <Link to="/tienda/general"><button className='btnVolverTG'>VOLVER</button></Link>}
                     </>  

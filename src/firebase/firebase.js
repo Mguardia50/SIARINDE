@@ -26,5 +26,3 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 export const db = getFirestore(app);
-
-//esto lo dejamos asi por el resto del proyecto

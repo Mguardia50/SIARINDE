@@ -16,13 +16,13 @@ function CartBox() {
     <>
 
         {compras.map(compra =>
-            <div className="boxCart">
+            <div className="boxCart" key={compra.id} >
             <p>{compra.Nombre}</p>
             <button className="btnQuitar" onClick={() => console.log(JSON.stringify(compra))}>-</button>
             <p>{compra.cantidad}</p>
             <button className="btnQuitar" onClick={() => console.log(JSON.stringify(compra))}>+</button>
             <p>TOTAL: ${compra.precio * compra.cantidad}</p>
-            <button className="btnQuitar" onClick={() => eliminarProducto(compra.id)}>Eliminar</button>
+            <button className="btnQuitar" onClick={() => eliminarProducto(compra.id, compra.stock)}>Eliminar</button>
         </div>
             
             

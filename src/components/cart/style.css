@@ -13,13 +13,20 @@
     display: none;
 }
 
+.boxAQ{
+    display: flex;
+    border: 1px solid black;
+    margin: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .btnQuitar{
     border: none;
     background-color: transparent;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bolder;
-    margin-left: 10px;
 }
 
 .btnQuitar:hover{

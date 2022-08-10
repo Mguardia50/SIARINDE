@@ -1,8 +1,17 @@
 ### SIARINDE V0.16
+* Ahora se puede autentificar un usuario mediante google.
+* Se actualizó la regla de firebase
+### ISUES QUE NO SE LLEGARON A CORREGIR
+* Al actualizar la pagina (refresh) se realiza el nuevo stock si es que el producto está cargado al carrito, ya que el stock se modifica en 2 ocasiones: al apretar el carrito para agregar al carrito de 
+compras y al finalizar el pedido en el caso que el stock se haya modificado
+* Si se modifica el stock en el carrito de compras (con el + y -), en la base de datos puede quedar negativo
+* La galeria de imagenes todavía no funciona en ItemDetail
+
+### SIARINDE V0.16
 * Ahora se sube el monto total al servidor firestore
 * Se actualiza el stock cuando se oprime el boton carrito en el itemDetail
 * Cuando se presiona eliminar, se vuelve a actualizar el stock con el valor anterior
-* A Corregir: si se refresca la página sin finalizat la compra, el stock se queda con el valor nuevo
+* A Corregir: si se refresca la página sin finalizar la compra, el stock se queda con el valor nuevo
 
 ### SIARINDE V0.15
 * Se eliminaron comentarios y código sin uso

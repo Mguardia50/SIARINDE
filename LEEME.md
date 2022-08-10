@@ -22,4 +22,4 @@ En este momento se está desarrollando la tienda, la cual es accesible mediante 
 
 ### CHANGELOG
 VER CHANGELOG
-(./Siarinde-Changelog.md)
+[Ir a Changelog](https://github.com/Mguardia50/SIARINDE/blob/main/Siarinde%20Changelog.md)
